@@ -1,7 +1,7 @@
 # IAD Spatial Interaction Examples
 All the examples for the course spatial interaction.
 
-### Processing & Media
+### Processing & Media
 
 * [IAD_CV_01_BrightestSpotImage](IAD_CV_01_BrightestSpotImage)
 * [IAD_CV_02_BrightestSpotCam](IAD_CV_02_BrightestSpotCam)
@@ -34,7 +34,7 @@ Visualise the detected objects on one frame.
 
 * [Wekinator](http://www.wekinator.org/)
 
-#### [Train Mouse Position](Simple_MouseXY_2Inputs)
+#### [Train Mouse Position](Simple_MouseXY_2Inputs)
 
 A very basic example on how to train the position of the mouse.
 
