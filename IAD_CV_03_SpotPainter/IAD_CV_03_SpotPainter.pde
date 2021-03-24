@@ -6,8 +6,7 @@ void setup() {
   size(640, 480, FX2D);
 
   // initialize camera
-  String[] inputDevices = Capture.list();
-  cam = new Capture(this, 640, 480, inputDevices[0]);
+  cam = new Capture(this, "pipeline:autovideosrc");
   cam.start();
 
   background(0);

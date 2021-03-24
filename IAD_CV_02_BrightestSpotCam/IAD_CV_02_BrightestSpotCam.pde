@@ -5,10 +5,7 @@ Capture cam;
 void setup() {
   size(640, 480, FX2D);
 
-  String[] inputDevices = Capture.list();
-  println(inputDevices);
-  cam = new Capture(this, inputDevices[0]);
-  
+  cam = new Capture(this, "pipeline:autovideosrc");
   cam.start();
 }
 
