@@ -19,7 +19,7 @@ void draw() {
     return;
   }
 
-  cam.filter(BLUR, 1);
+  cam.filter(BLUR, 3);
   //image(cam, 0, 0);
 
   // find brightest spot
@@ -44,7 +44,7 @@ void draw() {
   }
 
   // mark point (if brightness is enough)
-  if (maxBrightness > 240) {
+  if (maxBrightness >= 254) {
     fill(255);
     noStroke();
     circle(maxX, maxY, 10);
