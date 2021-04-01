@@ -24,7 +24,7 @@ void draw() {
 
   // loop over all pixels
   for (int x = 0; x < cam.width; x++) {
-    for (int y = 0; y <cam.height; y++) {
+    for (int y = 0; y < cam.height; y++) {
 
       // extract pixel and brightness
       color pixel = cam.get(x, y);
@@ -40,6 +40,7 @@ void draw() {
 
   // mark point
   stroke(50, 255, 50);
+  strokeWeight(3);
   noFill();
   circle(maxX, maxY, 50);
 }
