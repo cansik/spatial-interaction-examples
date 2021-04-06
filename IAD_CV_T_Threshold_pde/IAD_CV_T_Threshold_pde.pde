@@ -8,8 +8,7 @@ OpenCV opencv;
 void setup() {
   size(500, 500, FX2D);
 
-  String[] inputDevices = Capture.list();
-  cam = new Capture(this, 640, 480, inputDevices[0]);
+  cam = new Capture(this, "pipeline:autovideosrc");
   cam.start();
 
   opencv = new OpenCV(this, 640, 480);
@@ -23,7 +22,10 @@ void draw() {
 
   opencv.loadImage(cam);
 
-  opencv.threshold((int)map(mouseX, 0, width, 0, 255));
+  int tval = (int)map(mouseX, 0, width, 0, 255);
+  opencv.threshold(tval);
 
   image(opencv.getSnapshot(), 0, 0);
+  
+  surface.setTitle("Threshold: " + tval);
 }

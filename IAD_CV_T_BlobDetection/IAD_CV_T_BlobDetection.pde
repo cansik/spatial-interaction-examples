@@ -9,8 +9,7 @@ PImage last = null;
 void setup() {
   size(640, 480);
 
-  String[] inputDevices = Capture.list();
-  cam = new Capture(this, 640, 480, inputDevices[0]);
+  cam = new Capture(this, "pipeline:autovideosrc");
   cam.start();
 
   opencv = new OpenCV(this, 640, 480);
